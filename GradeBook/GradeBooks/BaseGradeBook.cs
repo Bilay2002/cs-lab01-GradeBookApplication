@@ -254,7 +254,7 @@ namespace GradeBook.GradeBooks
         ///     This has been used as a compromise to avoid adding additional complexity to the learner.
         /// </summary>
         /// <returns>The to gradebook.</returns>
-        /// <param name="json">Json.</param>
+        /// <param name="json">JSON.</param>
         public static dynamic ConvertToGradeBook(string json)
         {
             // Get GradeBookType from the GradeBook.Enums namespace
