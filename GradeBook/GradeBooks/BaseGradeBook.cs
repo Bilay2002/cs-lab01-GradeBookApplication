@@ -142,27 +142,22 @@ namespace GradeBook.GradeBooks
 
         public virtual char GetLetterGrade(double averageGrade)
         {
-            if (averageGrade >= 90)
+            switch ((int)Math.Floor(averageGrade / 10))
             {
-                return 'A';
-            }
-            else if (averageGrade >= 80)
-            {
-                return 'B';
-            }
-            else if (averageGrade >= 70)
-            {
-                return 'C';
-            }
-            else if (averageGrade >= 60)
-            {
-                return 'D';
-            }
-            else
-            {
-                return 'F';
+                case 10:
+                case 9:
+                    return 'A';
+                case 8:
+                    return 'B';
+                case 7:
+                    return 'C';
+                case 6:
+                    return 'D';
+                default:
+                    return 'F';
             }
         }
+
 
         public virtual void CalculateStatistics()
         {
